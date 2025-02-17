@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: yellow !important;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    margin-top: -10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-links a {
+    padding: 10px;
+}
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px;
+    }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Kutak</title>
+    <link rel="stylesheet" href="foto-kutak.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            margin-top: -10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: yellow;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-links a {
+            padding: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .gallery {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .gallery img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="naslovna.html">
+                <img src="logo.svg" alt="Logo" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="proizvodi.html">Proizvodi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="foto-kutak.html">Foto kutak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nagrade.html">Nagrade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="o _nama.html">O nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lokacija.html">Lokacija</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">Komentari</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="container fade-in" id="videoSection">
+        <h2 class="text-center mt-5">Pogledajte naš video</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="video204.mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+   
+    <div class="container fade-in" id="gallerySection">
+        <h2 class="text-center mt-5">Naša Galerija</h2>
+        <div class="gallery">
+            <img src="kosnica2.jpg" alt="Slika 1" onclick="window.location.href='kosnica2.jpg'">
+            <img src="nagrade.jpg" alt="Slika 2" onclick="window.location.href='nagrade.jpg'">
+            <img src="pcele.jpg" alt="Slika 3" onclick="window.location.href='pcele.jpg'">
+            <img src="staklenka.jpg" alt="Slika 4" onclick="window.location.href='staklenka.jpg'">
+            <img src="staklenke.jpg" alt="Slika 5" onclick="window.location.href='staklenke.jpg'">
+            <img src="med.jpg" alt="Slika 6" onclick="window.location.href='med.jpg'">
+        </div>
+    </div>
+
+    
+    <footer class="bg-black text-light text-center py-4 mt-5">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-warning" href="proizvodi.html">Proizvodi</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="foto-kutak.html">Foto kutak</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="nagrade.html">Nagrade</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="o_nama.html">O nama</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="lokacija.html">Lokacija</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="FAQ.html">Komentari</a></li>
+            </ul>
+            <hr class="bg-light">
+            <p class="mb-1">Narodnog oslobođenja 3, 51305 Tršće</p>
+            <p class="mb-1">📞 0921213547</p>
+            <p class="mb-0">✉️ aco.milosevic1@gmail.com</p>
+        </div>
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+        window.onload = function() {
+            document.getElementById('videoSection').classList.add('show');
+            document.getElementById('gallerySection').classList.add('show');
+        }
+    </script>
+</body>
+</html>
